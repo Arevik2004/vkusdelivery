@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+.next
+.git
+_legacy
+dev.log
+temp.html
+temp_home.html

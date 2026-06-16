@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Доставка еды - Главная</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🍕 ВкусDelivery</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Главная</a>
+                    <a href="catalog.html">Меню</a>
+                    <a href="cart.html" class="cart-link">Корзина <span id="cartCount" class="cart-count">0</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Слайдер акций -->
+        <section class="slider-section">
+            <div class="container">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide active">
+                            <div class="slide-content">
+                                <h2>Скидка 20% на первый заказ</h2>
+                                <p>При заказе от 1000 ₽</p>
+                                <button class="btn-primary" onclick="location.href='catalog.html'">Заказать сейчас</button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h2>Бесплатная доставка</h2>
+                                <p>При заказе от 1500 ₽</p>
+                                <button class="btn-primary" onclick="location.href='catalog.html'">Выбрать блюда</button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h2>Комбо-обеды</h2>
+                                <p>Сэкономьте до 30%</p>
+                                <button class="btn-primary" onclick="location.href='catalog.html'">Смотреть комбо</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn prev">❮</button>
+                    <button class="slider-btn next">❯</button>
+                    <div class="slider-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Категории блюд -->
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Категории</h2>
+                <div class="categories-grid" id="categoriesGrid">
+                    <div class="category-card" data-category="pizza">
+                        <div class="category-icon">🍕</div>
+                        <h3>Пицца</h3>
+                    </div>
+                    <div class="category-card" data-category="burger">
+                        <div class="category-icon">🍔</div>
+                        <h3>Бургеры</h3>
+                    </div>
+                    <div class="category-card" data-category="sushi">
+                        <div class="category-icon">🍣</div>
+                        <h3>Суши</h3>
+                    </div>
+                    <div class="category-card" data-category="salad">
+                        <div class="category-icon">🥗</div>
+                        <h3>Салаты</h3>
+                    </div>
+                    <div class="category-card" data-category="drink">
+                        <div class="category-icon">🥤</div>
+                        <h3>Напитки</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные позиции -->
+        <section class="popular-dishes">
+            <div class="container">
+                <h2 class="section-title">Популярные блюда</h2>
+                <div class="dishes-grid" id="popularDishes">
+                    <!-- Загружается через JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ВкусDelivery. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

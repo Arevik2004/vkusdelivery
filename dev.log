@@ -1,0 +1,22 @@
+
+> vkusdelivery@1.0.0 dev
+> next dev
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 2.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.3s (626 modules)
+ GET / 200 in 8925ms
+ ✓ Compiled in 708ms (303 modules)
+ GET / 200 in 101ms
+ ✓ Compiled /api/categories in 491ms (344 modules)
+ GET /api/categories 200 in 1906ms
+ ✓ Compiled /api/products in 206ms (346 modules)
+ GET /api/products 200 in 321ms
+ GET /api/products 200 in 28ms
+
+D:\opencode �ண�\food-delivery_3>

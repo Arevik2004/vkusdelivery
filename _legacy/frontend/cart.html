@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Доставка еды</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🍕 ВкусDelivery</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Меню</a>
+                    <a href="cart.html" class="active">Корзина <span id="cartCount" class="cart-count">0</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="section-title">Корзина</h2>
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems">
+                    <!-- Загружается через JS -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Итого</h3>
+                    <div class="summary-row">
+                        <span>Сумма:</span>
+                        <span id="subtotal">0 ₽</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Доставка:</span>
+                        <span id="delivery">0 ₽</span>
+                    </div>
+                    <div class="promo-code">
+                        <input type="text" id="promoCode" placeholder="Промокод">
+                        <button id="applyPromo" class="btn-secondary">Применить</button>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Итого:</span>
+                        <span id="total">0 ₽</span>
+                    </div>
+                    <button id="checkoutBtn" class="btn-primary">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ВкусDelivery. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

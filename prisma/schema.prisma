@@ -1,0 +1,224 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  phone     String?
+  password  String
+  name      String
+  avatar    String?
+  role      String   @default("USER")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  addresses Address[]
+  orders    Order[]
+  reviews   Review[]
+  cart      Cart?
+
+  @@map("users")
+}
+
+model Address {
+  id        String  @id @default(uuid())
+  userId    String  @map("user_id")
+  street    String
+  building  String
+  apartment String?
+  floor     String?
+  entrance  String?
+  intercom  String?
+  latitude  Float?
+  longitude Float?
+  isDefault Boolean @default(false) @map("is_default")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("addresses")
+}
+
+model Category {
+  id        String    @id @default(uuid())
+  name      String
+  slug      String    @unique
+  icon      String
+  image     String?
+  sortOrder Int       @default(0) @map("sort_order")
+  isActive  Boolean   @default(true) @map("is_active")
+  products  Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id            String          @id @default(uuid())
+  categoryId    String          @map("category_id")
+  name          String
+  slug          String          @unique
+  description   String
+  composition   String
+  price         Int
+  weight        Int
+  calories      Int
+  protein       Float
+  fat           Float
+  carbs         Float
+  cookingTime   Int             @map("cooking_time")
+  rating        Float           @default(5.0)
+  reviewsCount  Int             @default(0) @map("reviews_count")
+  isActive      Boolean         @default(true) @map("is_active")
+  isPopular     Boolean         @default(false) @map("is_popular")
+  isNew         Boolean         @default(false) @map("is_new")
+  isHit         Boolean         @default(false) @map("is_hit")
+  isVegan       Boolean         @default(false) @map("is_vegan")
+  isSpicy       Boolean         @default(false) @map("is_spicy")
+  isGlutenFree  Boolean         @default(false) @map("is_gluten_free")
+  allergens     String?
+  createdAt     DateTime        @default(now()) @map("created_at")
+  updatedAt     DateTime        @updatedAt @map("updated_at")
+
+  category      Category        @relation(fields: [categoryId], references: [id])
+  images        ProductImage[]
+  modifiers     ProductModifier[]
+  cartItems     CartItem[]
+  orderItems    OrderItem[]
+  reviews       Review[]
+
+  @@map("products")
+}
+
+model ProductImage {
+  id        String  @id @default(uuid())
+  productId String  @map("product_id")
+  url       String
+  altText   String  @map("alt_text")
+  isMain    Boolean @default(false) @map("is_main")
+  sortOrder Int     @default(0) @map("sort_order")
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("product_images")
+}
+
+model ProductModifier {
+  id        String         @id @default(uuid())
+  productId String         @map("product_id")
+  type      String
+  name      String
+  price     Int            @default(0)
+  isRequired Boolean       @default(false) @map("is_required")
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("product_modifiers")
+}
+
+model Cart {
+  id        String     @id @default(uuid())
+  userId    String?    @unique @map("user_id")
+  sessionId String?    @unique @map("session_id")
+  createdAt DateTime   @default(now()) @map("created_at")
+  updatedAt DateTime   @updatedAt @map("updated_at")
+
+  user      User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items     CartItem[]
+
+  @@map("carts")
+}
+
+model CartItem {
+  id          String   @id @default(uuid())
+  cartId      String   @map("cart_id")
+  productId   String   @map("product_id")
+  quantity    Int      @default(1)
+  modifiers   String?  // JSON string of selected modifiers
+  price       Int
+
+  cart    Cart    @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("cart_items")
+}
+
+model PromoCode {
+  id            String      @id @default(uuid())
+  code          String      @unique
+  type          String
+  value         Int
+  minOrderAmount Int        @default(0) @map("min_order_amount")
+  maxDiscount   Int?        @map("max_discount")
+  validFrom     DateTime    @map("valid_from")
+  validUntil    DateTime    @map("valid_until")
+  usageLimit    Int?        @map("usage_limit")
+  usageCount    Int         @default(0) @map("usage_count")
+  isActive      Boolean     @default(true) @map("is_active")
+
+  orders Order[]
+
+  @@map("promo_codes")
+}
+
+model Order {
+  id             String      @id @default(uuid())
+  userId         String?     @map("user_id")
+  status         String      @default("PENDING")
+  totalAmount    Int         @map("total_amount")
+  deliveryFee    Int         @default(0) @map("delivery_fee")
+  discount       Int         @default(0)
+  finalAmount    Int         @map("final_amount")
+  deliveryAddress String     @map("delivery_address")
+  deliveryTime   String      @map("delivery_time")
+  paymentMethod  String      @map("payment_method")
+  paymentStatus  String      @default("PENDING") @map("payment_status")
+  comment        String?
+  promoCodeId    String?     @map("promo_code_id")
+  courierId      String?     @map("courier_id")
+  createdAt      DateTime    @default(now()) @map("created_at")
+  updatedAt      DateTime    @updatedAt @map("updated_at")
+
+  user       User?      @relation(fields: [userId], references: [id])
+  promoCode  PromoCode? @relation(fields: [promoCodeId], references: [id])
+  items      OrderItem[]
+  reviews    Review[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id          String  @id @default(uuid())
+  orderId     String  @map("order_id")
+  productId   String  @map("product_id")
+  quantity    Int
+  price       Int
+  modifiers   String?
+
+  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id])
+
+  @@map("order_items")
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  productId String   @map("product_id")
+  orderId   String?  @map("order_id")
+  rating    Int
+  comment   String?
+  images    String?
+  isApproved Boolean @default(false) @map("is_approved")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user    User    @relation(fields: [userId], references: [id])
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  order   Order?  @relation(fields: [orderId], references: [id])
+
+  @@map("reviews")
+}

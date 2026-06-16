@@ -1,0 +1,235 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Маргарита",
+      "description": "Классическая итальянская пицца с томатами и моцареллой",
+      "price": 450,
+      "category": "pizza",
+      "icon": "🍕",
+      "weight": "450г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f8a35c'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle' dominant-baseline='middle'%3E🍕%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle' font-family='Arial'%3EМаргарита%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 2,
+      "name": "Пепперони",
+      "description": "Острая пицца с колбасой пепперони и сыром",
+      "price": 520,
+      "category": "pizza",
+      "icon": "🍕",
+      "weight": "500г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23d9534f'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🍕%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EПепперони%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 3,
+      "name": "Гавайская",
+      "description": "Курица, ананасы, моцарелла, томатный соус",
+      "price": 550,
+      "category": "pizza",
+      "icon": "🍍",
+      "weight": "480г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f0ad4e'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🍍%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EГавайская%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 4,
+      "name": "Четыре сыра",
+      "description": "Дор блю, пармезан, моцарелла, горгонзола",
+      "price": 590,
+      "category": "pizza",
+      "icon": "🧀",
+      "weight": "490г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23ffc107'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🧀%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EЧетыре сыра%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 5,
+      "name": "Мясная",
+      "description": "Ветчина, бекон, пепперони, курица, говядина",
+      "price": 650,
+      "category": "pizza",
+      "icon": "🥓",
+      "weight": "550г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23b52b1d'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🥓%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EМясная%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 6,
+      "name": "Мексиканская",
+      "description": "Острый перец халапеньо, курица, томаты, фасоль",
+      "price": 580,
+      "category": "pizza",
+      "icon": "🌶️",
+      "weight": "510г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e67e22'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🌶️%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EМексиканская%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 7,
+      "name": "Чизбургер",
+      "description": "Говяжья котлета, сыр чеддер, соленые огурцы, соус BBQ",
+      "price": 320,
+      "category": "burger",
+      "icon": "🍔",
+      "weight": "280г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23cd7f32'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🍔%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EЧизбургер%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 8,
+      "name": "Двойной бургер",
+      "description": "Две котлеты, двойной сыр, бекон, свежие овощи",
+      "price": 480,
+      "category": "burger",
+      "icon": "🍔",
+      "weight": "380г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23a0522d'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🍔%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EДвойной бургер%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 9,
+      "name": "Чикен бургер",
+      "description": "Куриная котлета, айсберг, томаты, соус Цезарь",
+      "price": 350,
+      "category": "burger",
+      "icon": "🐔",
+      "weight": "290г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e8b86b'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🐔%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EЧикен бургер%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 10,
+      "name": "Острый бургер",
+      "description": "Котлета с халапеньо, сыр, лук, острый соус",
+      "price": 390,
+      "category": "burger",
+      "icon": "🌶️",
+      "weight": "300г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23d35400'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🌶️%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EОстрый бургер%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 11,
+      "name": "Вегги бургер",
+      "description": "Котлета из нута, авокадо, рукола, веган соус",
+      "price": 410,
+      "category": "burger",
+      "icon": "🥑",
+      "weight": "320г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%236b8e23'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🥑%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EВегги бургер%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 12,
+      "name": "Бургер с яйцом",
+      "description": "Говяжья котлета, яичница, бекон, сыр гауда",
+      "price": 450,
+      "category": "burger",
+      "icon": "🍳",
+      "weight": "330г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f39c12'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🍳%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EБургер с яйцом%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 13,
+      "name": "Филадельфия",
+      "description": "Лосось, сливочный сыр, огурец, авокадо",
+      "price": 620,
+      "category": "sushi",
+      "icon": "🍣",
+      "weight": "240г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e91e63'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🍣%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EФиладельфия%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 14,
+      "name": "Калифорния",
+      "description": "Краб, авокадо, огурец, икра тобико",
+      "price": 590,
+      "category": "sushi",
+      "icon": "🥑",
+      "weight": "230г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%239c27b0'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🥑%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EКалифорния%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 15,
+      "name": "Унаги",
+      "description": "Угорь, огурец, соус унаги, кунжут",
+      "price": 580,
+      "category": "sushi",
+      "icon": "🐟",
+      "weight": "220г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23007bff'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🐟%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EУнаги%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 16,
+      "name": "Сет 'Классический'",
+      "description": "Филадельфия (6шт) + Калифорния (6шт)",
+      "price": 1150,
+      "category": "sushi",
+      "icon": "📦",
+      "weight": "480г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%236f42c1'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E📦%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EКлассический сет%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 17,
+      "name": "Гунканы с лососем",
+      "description": "Рис, нори, лосось, сливочный сыр, зеленый лук",
+      "price": 380,
+      "category": "sushi",
+      "icon": "🐟",
+      "weight": "150г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23fd7e14'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🐟%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EГунканы%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 18,
+      "name": "Цезарь с курицей",
+      "description": "Курица гриль, салат романо, сухарики, пармезан, соус",
+      "price": 420,
+      "category": "salad",
+      "icon": "🥗",
+      "weight": "280г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%232ecc71'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🥗%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EЦезарь%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 19,
+      "name": "Греческий",
+      "description": "Фета, маслины, огурец, томаты, перец, оливковое масло",
+      "price": 390,
+      "category": "salad",
+      "icon": "🫒",
+      "weight": "270г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%233cb371'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🫒%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EГреческий%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 20,
+      "name": "Теплый салат с говядиной",
+      "description": "Говядина, микрозелень, соус терияки, орехи",
+      "price": 550,
+      "category": "salad",
+      "icon": "🥩",
+      "weight": "310г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e67e22'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🥩%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EТеплый салат%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 21,
+      "name": "Оливье с курицей",
+      "description": "Классический рецепт с курицей и консервированным горошком",
+      "price": 290,
+      "category": "salad",
+      "icon": "🥔",
+      "weight": "250г",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f1c40f'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🥔%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EОливье%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 22,
+      "name": "Свежий сок апельсиновый",
+      "description": "100% апельсин, без сахара",
+      "price": 210,
+      "category": "drink",
+      "icon": "🧃",
+      "volume": "0.4л",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e67e22'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🧃%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EАпельсиновый сок%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "id": 23,
+      "name": "Кола",
+      "description": "Охлажденный напиток",
+      "price": 120,
+      "category": "drink",
+      "icon": "🥤",
+      "volume": "0.5л",
+      "imageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23333'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle'%3E🥤%3C/text%3E%3Ctext x='50%25' y='65%25' font-size='24' fill='white' text-anchor='middle'%3EКола%3C/text%3E%3C/svg%3E"
+    }
+  ],
+  "orders": []
+}
