@@ -39,9 +39,6 @@
 | **База данных** | SQLite (Prisma ORM) |
 | **Аутентификация** | JWT-токены (jose) |
 | **State management** | Zustand |
-| **Фото блюд** | AI-генерация (Pollinations) |
-| **Сервер** | Ubuntu, Nginx, PM2, Let's Encrypt |
-
 
 ---
 
